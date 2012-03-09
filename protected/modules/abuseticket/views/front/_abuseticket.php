@@ -16,9 +16,9 @@
 		<?php echo $form->labelEx($model,'target_type'); ?>
 		<?php //echo $form->textField($model,'target_type'); ?>
 		<?php echo $form->dropDownList($model, 'target_type', array( 
-																														AbuseTicket::TARGET_PROFILE => 'Other users profile',
-																														AbuseTicket::TARGET_MESSAGE => 'A message that another user send them',
-																														AbuseTicket::TARGET_THREAD => 'A discussion thread in a product page',
+																														AbuseTicket::TARGET_PROFILE => 'profile',
+																														AbuseTicket::TARGET_MESSAGE => 'message',
+																														AbuseTicket::TARGET_DISCUSSION => 'discussion',
 																													));
 		?>
 		<?php echo $form->error($model,'target_type'); ?>
@@ -27,6 +27,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'target_id'); ?>
 		<?php //echo $form->textField($model,'target_id'); ?>
+		<!-- @TODO: should change with whatever is selected from target type -->
 		<?php echo $form->dropDownList($model, 'target_id', CHtml::listData(User::model()->findAll(), 'id', 'username')); ?>
 		<?php echo $form->error($model,'target_id'); ?>
 	</div>

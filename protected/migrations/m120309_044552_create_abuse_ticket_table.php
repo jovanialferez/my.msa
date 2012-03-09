@@ -8,7 +8,7 @@ class m120309_044552_create_abuse_ticket_table extends CDbMigration
 			'id' => 'pk',
 			'create_timestamp' => 'timestamp',
 			'issuer_id' => 'integer',
-			'target_type' => 'integer',
+			'target_type' => 'string',
 			'target_id' => 'integer',
 			'reason_id' => 'integer',
 			'comment' => 'text',
