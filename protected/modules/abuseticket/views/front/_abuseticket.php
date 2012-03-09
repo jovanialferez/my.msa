@@ -9,8 +9,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	
-	<?php echo $form->hiddenField($model, 'issuer_id', array( 'value' => Yii::app()->user->id )); ?>
+		<?php 
+		//echo $form->hiddenField($model, 'issuer_id', array( 'value' => Yii::app()->user->id )); 
+		// dummy
+		echo $form->hiddenField($model, 'issuer_id', array( 'value' => 1 )); 
+	?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'target_type'); ?>
